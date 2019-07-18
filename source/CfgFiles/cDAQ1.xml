@@ -1,0 +1,208 @@
+<?xml version='1.0' standalone='yes' ?>
+<GXML_Root>
+  <ge_XMLver type='Version'>2.0</ge_XMLver>
+  <ChassisType type='Enum U16' sel='8-Slot'>3</ChassisType>
+  <GlobalBlockSize type='Enum U16' sel='No'>0</GlobalBlockSize>
+  <TimingGrp mems='4' id='HSGrps'>
+    <Rate type='DBL'>50000</Rate>
+    <ReadBlk type='I32'>1000</ReadBlk>
+    <Modbus_URL type='String'></Modbus_URL>
+    <ChanGroups dim='[1]' type='Cluster'>
+      <GrpHdr mems='2'>
+        <GroupName type='String'>Volt HS</GroupName>
+        <MeasType type='Enum U16' sel='Voltage'>0</MeasType>
+      </GrpHdr>
+    </ChanGroups>
+  </TimingGrp>
+  <TimingGrp mems='4' id='LSGrps'>
+    <Rate type='DBL'>100</Rate>
+    <ReadBlk type='I32'>50</ReadBlk>
+    <Modbus_URL type='String'>psp://localhost/ModbusLib/ModbusEthernetSlave/AF300001L5</Modbus_URL>
+    <ChanGroups dim='[1]' type='Cluster'>
+      <GrpHdr mems='2'>
+        <GroupName type='String'>Temp LS</GroupName>
+        <MeasType type='Enum U16' sel='Thermocouple'>4</MeasType>
+      </GrpHdr>
+    </ChanGroups>
+  </TimingGrp>
+  <VoltGroup mems='3' id='Volt HS'>
+    <GroupName type='String'>Volt HS</GroupName>
+    <MeasType type='Enum U16' sel='Voltage'>0</MeasType>
+    <GroupMems dim='[4]' type='Cluster'>
+      <VoltChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod1/ai0</ChanName>
+          <ModbusAddr type='String'></ModbusAddr>
+          <ToModBus type='Bool'>FALSE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9205</Device>
+          <Unit_EU type='String'>V</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>10</VRange>
+          <Term_Cfg type='U16'>10083</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+      </VoltChan>
+      <VoltChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod1/ai1</ChanName>
+          <ModbusAddr type='String'></ModbusAddr>
+          <ToModBus type='Bool'>FALSE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9205</Device>
+          <Unit_EU type='String'>V</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>10</VRange>
+          <Term_Cfg type='U16'>10083</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+      </VoltChan>
+      <VoltChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod1/ai2</ChanName>
+          <ModbusAddr type='String'></ModbusAddr>
+          <ToModBus type='Bool'>FALSE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9205</Device>
+          <Unit_EU type='String'>V</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>10</VRange>
+          <Term_Cfg type='U16'>10083</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+      </VoltChan>
+      <VoltChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod1/ai3</ChanName>
+          <ModbusAddr type='String'></ModbusAddr>
+          <ToModBus type='Bool'>FALSE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9205</Device>
+          <Unit_EU type='String'>V</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>10</VRange>
+          <Term_Cfg type='U16'>10083</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+      </VoltChan>
+    </GroupMems>
+  </VoltGroup>
+  <ThrmcplGroup mems='3' id='Temp LS'>
+    <GroupName type='String'>Temp LS</GroupName>
+    <MeasType type='Enum U16' sel='Thermocouple'>4</MeasType>
+    <GroupMems dim='[5]' type='Cluster'>
+      <ThrmcplChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod2/ai0</ChanName>
+          <ModbusAddr type='String'>300001</ModbusAddr>
+          <ToModBus type='Bool'>TRUE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9214</Device>
+          <Unit_EU type='String'>Deg F</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <ThrmcplChanCfg mems='6'>
+          <Units type='U16'>10144</Units>
+          <Type type='U16'>10072</Type>
+          <cjc_source type='U16'>10200</cjc_source>
+          <cjc_val type='DBL'>25</cjc_val>
+          <Approx_Max type='DBL'>2192</Approx_Max>
+          <Approx_Min type='DBL'>-328</Approx_Min>
+        </ThrmcplChanCfg>
+      </ThrmcplChan>
+      <ThrmcplChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod2/ai1</ChanName>
+          <ModbusAddr type='String'>300003</ModbusAddr>
+          <ToModBus type='Bool'>TRUE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9214</Device>
+          <Unit_EU type='String'>Deg F</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <ThrmcplChanCfg mems='6'>
+          <Units type='U16'>10144</Units>
+          <Type type='U16'>10072</Type>
+          <cjc_source type='U16'>10200</cjc_source>
+          <cjc_val type='DBL'>25</cjc_val>
+          <Approx_Max type='DBL'>2192</Approx_Max>
+          <Approx_Min type='DBL'>-328</Approx_Min>
+        </ThrmcplChanCfg>
+      </ThrmcplChan>
+      <ThrmcplChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod2/ai2</ChanName>
+          <ModbusAddr type='String'>300005</ModbusAddr>
+          <ToModBus type='Bool'>TRUE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9214</Device>
+          <Unit_EU type='String'>Deg F</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <ThrmcplChanCfg mems='6'>
+          <Units type='U16'>10144</Units>
+          <Type type='U16'>10072</Type>
+          <cjc_source type='U16'>10200</cjc_source>
+          <cjc_val type='DBL'>25</cjc_val>
+          <Approx_Max type='DBL'>2192</Approx_Max>
+          <Approx_Min type='DBL'>-328</Approx_Min>
+        </ThrmcplChanCfg>
+      </ThrmcplChan>
+      <ThrmcplChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod2/ai3</ChanName>
+          <ModbusAddr type='String'>300007</ModbusAddr>
+          <ToModBus type='Bool'>TRUE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9214</Device>
+          <Unit_EU type='String'>Deg F</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <ThrmcplChanCfg mems='6'>
+          <Units type='U16'>10144</Units>
+          <Type type='U16'>10072</Type>
+          <cjc_source type='U16'>10200</cjc_source>
+          <cjc_val type='DBL'>25</cjc_val>
+          <Approx_Max type='DBL'>2192</Approx_Max>
+          <Approx_Min type='DBL'>-328</Approx_Min>
+        </ThrmcplChanCfg>
+      </ThrmcplChan>
+      <ThrmcplChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod2/ai4</ChanName>
+          <ModbusAddr type='String'>300009</ModbusAddr>
+          <ToModBus type='Bool'>TRUE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9214</Device>
+          <Unit_EU type='String'>Deg F</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <ThrmcplChanCfg mems='6'>
+          <Units type='U16'>10144</Units>
+          <Type type='U16'>10072</Type>
+          <cjc_source type='U16'>10200</cjc_source>
+          <cjc_val type='DBL'>25</cjc_val>
+          <Approx_Max type='DBL'>2192</Approx_Max>
+          <Approx_Min type='DBL'>-328</Approx_Min>
+        </ThrmcplChanCfg>
+      </ThrmcplChan>
+    </GroupMems>
+  </ThrmcplGroup>
+</GXML_Root>

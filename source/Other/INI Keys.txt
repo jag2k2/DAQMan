@@ -1,0 +1,5 @@
+ESys.StdNParallel=-1
+ESys.DAQ.Normal=16
+ESys.DAQ.High=0
+ESys.DAQ.VHigh=0
+ESys.DAQ.TCritical=0

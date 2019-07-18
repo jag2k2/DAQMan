@@ -1,0 +1,109 @@
+<?xml version='1.0' standalone='yes' ?>
+<GXML_Root>
+  <ge_XMLver type='Version'>2.0</ge_XMLver>
+  <ChassisType type='Enum U16' sel='8-Slot'>3</ChassisType>
+  <GlobalBlockSize type='Enum U16' sel='No'>0</GlobalBlockSize>
+  <TimingGrp mems='4' id='HSGrps'>
+    <Rate type='DBL'>5120</Rate>
+    <ReadBlk type='I32'>1024</ReadBlk>
+    <Modbus_URL type='String'>psp://localhost/ModbusLib/ModbusEthernetSlave/AF301501L2</Modbus_URL>
+    <ChanGroups dim='[1]' type='Cluster'>
+      <GrpHdr mems='2'>
+        <GroupName type='String'>Accel HS</GroupName>
+        <MeasType type='Enum U16' sel='Tachometer'>2</MeasType>
+      </GrpHdr>
+    </ChanGroups>
+  </TimingGrp>
+  <TimingGrp mems='4' id='LSGrps'>
+    <Rate type='DBL'>100</Rate>
+    <ReadBlk type='I32'>64</ReadBlk>
+    <Modbus_URL type='String'></Modbus_URL>
+    <ChanGroups dim='[0]' type='Cluster'>
+      <GrpHdr mems='2'>
+        <GroupName type='String'></GroupName>
+        <MeasType type='Enum U16'></MeasType>
+      </GrpHdr>
+    </ChanGroups>
+  </TimingGrp>
+  <TachGroup mems='3' id='Accel HS'>
+    <GroupName type='String'>Accel HS</GroupName>
+    <MeasType type='Enum U16' sel='Tachometer'>2</MeasType>
+    <GroupMems dim='[3]' type='Cluster'>
+      <TachChan mems='4'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod1/ai0</ChanName>
+          <ModbusAddr type='String'>301501</ModbusAddr>
+          <ToModBus type='Bool'>TRUE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9234</Device>
+          <Unit_EU type='String'>RPM</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>5</VRange>
+          <Term_Cfg type='U16'>12529</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+        <FreqChanCfg mems='3'>
+          <Thresh type='DBL'>1.8</Thresh>
+          <Slope type='U16'>1</Slope>
+          <Min_EU type='DBL'>60</Min_EU>
+        </FreqChanCfg>
+        <TachChanCfg mems='1'>
+          <PPR type='DBL'>2</PPR>
+        </TachChanCfg>
+      </TachChan>
+      <TachChan mems='4'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod1/ai1</ChanName>
+          <ModbusAddr type='String'>301503</ModbusAddr>
+          <ToModBus type='Bool'>TRUE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9234</Device>
+          <Unit_EU type='String'>RPM</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>5</VRange>
+          <Term_Cfg type='U16'>12529</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+        <FreqChanCfg mems='3'>
+          <Thresh type='DBL'>1.8</Thresh>
+          <Slope type='U16'>1</Slope>
+          <Min_EU type='DBL'>60</Min_EU>
+        </FreqChanCfg>
+        <TachChanCfg mems='1'>
+          <PPR type='DBL'>2</PPR>
+        </TachChanCfg>
+      </TachChan>
+      <TachChan mems='4'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod1/ai2</ChanName>
+          <ModbusAddr type='String'></ModbusAddr>
+          <ToModBus type='Bool'>FALSE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9234</Device>
+          <Unit_EU type='String'>RPM</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>5</VRange>
+          <Term_Cfg type='U16'>12529</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+        <FreqChanCfg mems='3'>
+          <Thresh type='DBL'>1.8</Thresh>
+          <Slope type='U16'>1</Slope>
+          <Min_EU type='DBL'>60</Min_EU>
+        </FreqChanCfg>
+        <TachChanCfg mems='1'>
+          <PPR type='DBL'>2</PPR>
+        </TachChanCfg>
+      </TachChan>
+    </GroupMems>
+  </TachGroup>
+</GXML_Root>
