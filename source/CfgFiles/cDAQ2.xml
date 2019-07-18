@@ -1,0 +1,161 @@
+<?xml version='1.0' standalone='yes' ?>
+<GXML_Root>
+  <ge_XMLver type='Version'>2.0</ge_XMLver>
+  <ChassisType type='Enum U16' sel='8-Slot'>3</ChassisType>
+  <GlobalBlockSize type='Enum U16' sel='No'>0</GlobalBlockSize>
+  <TimingGrp mems='5' id='HSGrps'>
+    <Rate type='DBL'>5120</Rate>
+    <ReadBlk type='I32'>512</ReadBlk>
+    <Modbus_URL type='String'></Modbus_URL>
+    <TCP_Gap type='I32'>0</TCP_Gap>
+    <ChanGroups dim='[1]' type='Cluster'>
+      <GrpHdr mems='2'>
+        <GroupName type='String'>Untitled</GroupName>
+        <MeasType type='Enum U16' sel='Voltage'>0</MeasType>
+      </GrpHdr>
+    </ChanGroups>
+  </TimingGrp>
+  <TimingGrp mems='5' id='LSGrps'>
+    <Rate type='DBL'>100</Rate>
+    <ReadBlk type='I32'>100</ReadBlk>
+    <Modbus_URL type='String'>psp://localhost/ModbusLib/ModbusEthernetSlave/AF301001L3</Modbus_URL>
+    <TCP_Gap type='I32'>0</TCP_Gap>
+    <ChanGroups dim='[1]' type='Cluster'>
+      <GrpHdr mems='2'>
+        <GroupName type='String'>Untitled2</GroupName>
+        <MeasType type='Enum U16' sel='Voltage'>0</MeasType>
+      </GrpHdr>
+    </ChanGroups>
+  </TimingGrp>
+  <VoltGroup mems='3' id='Untitled'>
+    <GroupName type='String'>Untitled</GroupName>
+    <MeasType type='Enum U16' sel='Voltage'>0</MeasType>
+    <GroupMems dim='[4]' type='Cluster'>
+      <VoltChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod1/ai0</ChanName>
+          <ModbusAddr type='String'></ModbusAddr>
+          <ToModBus type='Bool'>FALSE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9234</Device>
+          <Unit_EU type='String'>V</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>5</VRange>
+          <Term_Cfg type='U16'>12529</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+      </VoltChan>
+      <VoltChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod1/ai1</ChanName>
+          <ModbusAddr type='String'></ModbusAddr>
+          <ToModBus type='Bool'>FALSE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9234</Device>
+          <Unit_EU type='String'>V</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>5</VRange>
+          <Term_Cfg type='U16'>12529</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+      </VoltChan>
+      <VoltChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod1/ai2</ChanName>
+          <ModbusAddr type='String'></ModbusAddr>
+          <ToModBus type='Bool'>FALSE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9234</Device>
+          <Unit_EU type='String'>V</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>5</VRange>
+          <Term_Cfg type='U16'>12529</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+      </VoltChan>
+      <VoltChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod1/ai3</ChanName>
+          <ModbusAddr type='String'></ModbusAddr>
+          <ToModBus type='Bool'>FALSE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9234</Device>
+          <Unit_EU type='String'>V</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>5</VRange>
+          <Term_Cfg type='U16'>12529</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+      </VoltChan>
+    </GroupMems>
+  </VoltGroup>
+  <VoltGroup mems='3' id='Untitled2'>
+    <GroupName type='String'>Untitled2</GroupName>
+    <MeasType type='Enum U16' sel='Voltage'>0</MeasType>
+    <GroupMems dim='[3]' type='Cluster'>
+      <VoltChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod3/ai0</ChanName>
+          <ModbusAddr type='String'>301001</ModbusAddr>
+          <ToModBus type='Bool'>TRUE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9219</Device>
+          <Unit_EU type='String'>V</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>60</VRange>
+          <Term_Cfg type='U16'>10106</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+      </VoltChan>
+      <VoltChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod3/ai1</ChanName>
+          <ModbusAddr type='String'>301003</ModbusAddr>
+          <ToModBus type='Bool'>TRUE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9219</Device>
+          <Unit_EU type='String'>V</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>60</VRange>
+          <Term_Cfg type='U16'>10106</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+      </VoltChan>
+      <VoltChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Mod3/ai2</ChanName>
+          <ModbusAddr type='String'>301005</ModbusAddr>
+          <ToModBus type='Bool'>TRUE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>NI 9219</Device>
+          <Unit_EU type='String'>V</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>60</VRange>
+          <Term_Cfg type='U16'>10106</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+      </VoltChan>
+    </GroupMems>
+  </VoltGroup>
+</GXML_Root>

@@ -1,0 +1,25 @@
+<?xml version='1.0' standalone='yes' ?>
+<GXML_Root>
+  <GlblCfgVersion type='Version'>1.2</GlblCfgVersion>
+  <Workspace mems='2'>
+    <Ports mems='3'>
+      <Port_Rdr type='U16'>5555</Port_Rdr>
+      <Port_HS type='U16'>5556</Port_HS>
+      <Port_LS type='U16'>5557</Port_LS>
+    </Ports>
+    <GlblConfig dim='[3]' type='Cluster'>
+      <Default_Cfg mems='2'>
+        <Chassis_Name type='String'>cDAQ1</Chassis_Name>
+        <CfgFile type='Path'></CfgFile>
+      </Default_Cfg>
+      <Default_Cfg mems='2'>
+        <Chassis_Name type='String'>cDAQ9188-1573B81</Chassis_Name>
+        <CfgFile type='Path'></CfgFile>
+      </Default_Cfg>
+      <Default_Cfg mems='2'>
+        <Chassis_Name type='String'>PXI1</Chassis_Name>
+        <CfgFile type='Path'></CfgFile>
+      </Default_Cfg>
+    </GlblConfig>
+  </Workspace>
+</GXML_Root>

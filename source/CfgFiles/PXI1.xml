@@ -1,0 +1,102 @@
+<?xml version='1.0' standalone='yes' ?>
+<GXML_Root>
+  <ge_XMLver type='Version'>2.0</ge_XMLver>
+  <ChassisType type='Enum U16' sel='PXI 8-Slot'>4</ChassisType>
+  <GlobalBlockSize type='Enum U16' sel='No'>0</GlobalBlockSize>
+  <TimingGrp mems='4' id='HSGrps'>
+    <Rate type='DBL'>5000</Rate>
+    <ReadBlk type='I32'>1024</ReadBlk>
+    <Modbus_URL type='String'></Modbus_URL>
+    <ChanGroups dim='[1]' type='Cluster'>
+      <GrpHdr mems='2'>
+        <GroupName type='String'>Untitled</GroupName>
+        <MeasType type='Enum U16' sel='Voltage'>0</MeasType>
+      </GrpHdr>
+    </ChanGroups>
+  </TimingGrp>
+  <TimingGrp mems='4' id='LSGrps'>
+    <Rate type='DBL'>100</Rate>
+    <ReadBlk type='I32'>64</ReadBlk>
+    <Modbus_URL type='String'></Modbus_URL>
+    <ChanGroups dim='[0]' type='Cluster'>
+      <GrpHdr mems='2'>
+        <GroupName type='String'></GroupName>
+        <MeasType type='Enum U16'></MeasType>
+      </GrpHdr>
+    </ChanGroups>
+  </TimingGrp>
+  <VoltGroup mems='3' id='Untitled'>
+    <GroupName type='String'>Untitled</GroupName>
+    <MeasType type='Enum U16' sel='Voltage'>0</MeasType>
+    <GroupMems dim='[4]' type='Cluster'>
+      <VoltChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Slot2/ai1</ChanName>
+          <ModbusAddr type='String'></ModbusAddr>
+          <ToModBus type='Bool'>FALSE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>PXIe-4300</Device>
+          <Unit_EU type='String'>V</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>10</VRange>
+          <Term_Cfg type='U16'>10106</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+      </VoltChan>
+      <VoltChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Slot2/ai2</ChanName>
+          <ModbusAddr type='String'></ModbusAddr>
+          <ToModBus type='Bool'>FALSE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>PXIe-4300</Device>
+          <Unit_EU type='String'>V</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>10</VRange>
+          <Term_Cfg type='U16'>10106</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+      </VoltChan>
+      <VoltChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Slot2/ai3</ChanName>
+          <ModbusAddr type='String'></ModbusAddr>
+          <ToModBus type='Bool'>FALSE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>PXIe-4300</Device>
+          <Unit_EU type='String'>V</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>10</VRange>
+          <Term_Cfg type='U16'>10106</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+      </VoltChan>
+      <VoltChan mems='2'>
+        <ChanHdr mems='8'>
+          <ChanName type='String'>Slot2/ai4</ChanName>
+          <ModbusAddr type='String'></ModbusAddr>
+          <ToModBus type='Bool'>FALSE</ToModBus>
+          <Alias type='String'></Alias>
+          <Device type='String'>PXIe-4300</Device>
+          <Unit_EU type='String'>V</Unit_EU>
+          <Scale type='DBL'>1</Scale>
+          <Offset type='DBL'>0</Offset>
+        </ChanHdr>
+        <VoltChanCfg mems='3'>
+          <VRange type='DBL'>10</VRange>
+          <Term_Cfg type='U16'>10106</Term_Cfg>
+          <Coupling type='U16'>10050</Coupling>
+        </VoltChanCfg>
+      </VoltChan>
+    </GroupMems>
+  </VoltGroup>
+</GXML_Root>
